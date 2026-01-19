@@ -1,3 +1,6 @@
+/* ============================
+   Global Styles
+=============================== */
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +14,9 @@ body {
     line-height: 1.6;
 }
 
+/* ============================
+   Header
+=============================== */
 .site-header {
     display: flex;
     justify-content: space-between;
@@ -32,21 +38,27 @@ body {
     font-weight: 500;
 }
 
-.hero {
+/* ============================
+   Main / Intro Section
+=============================== */
+.hero, .intro {
     padding: 4rem 2rem;
     max-width: 900px;
     margin: auto;
 }
 
-.hero h2 {
+.hero h2, .intro h2 {
     font-size: 2.2rem;
     margin-bottom: 1rem;
 }
 
+/* ============================
+   Articles Section
+=============================== */
 .articles {
     max-width: 900px;
-    margin: auto;
-    padding: 0 2rem 4rem;
+    margin: 2rem auto 4rem;
+    padding: 0 2rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.5rem;
@@ -54,21 +66,35 @@ body {
 
 .card {
     background: white;
+    border: 1px solid #e0e0e0;
     padding: 1.5rem;
     border-radius: 10px;
-    border: 1px solid #e0e0e0;
 }
 
+.card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    font-size: 0.95rem;
+}
+
+/* ============================
+   About Page
+=============================== */
 .about {
     max-width: 800px;
     margin: auto;
     padding: 4rem 2rem;
 }
 
+/* ============================
+   Footer
+=============================== */
 footer {
     text-align: center;
     padding: 1.5rem;
-    border-top: 1px solid #ddd;
     background: white;
+    border-top: 1px solid #ddd;
     font-size: 0.9rem;
 }
