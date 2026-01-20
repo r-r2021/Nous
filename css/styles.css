@@ -75,27 +75,53 @@ body {
    Articles Section
 =============================== */
 .articles {
-    max-width: 900px;
-    margin: 2rem auto 4rem;
+    max-width: 1200px;
+    margin: 2rem auto;
     padding: 0 2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
 
 .card {
-    background: white;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Article 1: box left, text right */
+.article-left {
+    flex-direction: row;
+}
+
+/* Article 2: text left, box right */
+.article-right {
+    flex-direction: row-reverse;
+}
+
+/* White box */
+.box {
+    width: 200px;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 8px;
     border: 1px solid #e0e0e0;
-    padding: 1.5rem;
-    border-radius: 10px;
+    flex-shrink: 0;
 }
 
-.card h3 {
-    margin-bottom: 0.5rem;
+/* Text styling */
+.article-text {
+    flex: 1;
+    padding: 1rem;
 }
 
-.card p {
-    font-size: 0.95rem;
+/* Typewriter effect */
+.typewriter {
+    font-family: monospace;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #222; /* Cursor */
 }
 
 /* ============================
