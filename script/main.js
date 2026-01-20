@@ -2,19 +2,26 @@ function startTypewriter() {
     const typewriters = document.querySelectorAll(".typewriter");
 
     typewriters.forEach(el => {
-        const text = el.getAttribute("data-text");
-        let i = 0;
+        const text = el.dataset.text;
+        el.textContent = ""; 
 
-        const cursor = el.style.borderRight; // keep border for cursor
+   
+        const cursor = document.createElement("span");
+        cursor.classList.add("cursor");
+        cursor.textContent = "|";
+        el.appendChild(cursor);
+
+        let i = 0;
 
         function type() {
             if (i < text.length) {
-                el.textContent += text.charAt(i);
+                const span = document.createElement("span");
+                span.textContent = text[i];
+                el.insertBefore(span, cursor); // insert before cursor
                 i++;
                 setTimeout(type, 50);
             } else {
-                // Stop cursor after typing
-                el.style.borderRight = "none";
+                cursor.remove(); 
             }
         }
 
@@ -22,7 +29,6 @@ function startTypewriter() {
     });
 }
 
-// Run typewriter after loading animation
 setTimeout(() => {
     startTypewriter();
-}, 3200); // match your loading screen duration
+}, 3200);

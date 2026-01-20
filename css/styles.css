@@ -17,9 +17,7 @@
 
 }
 
-/* ============================
-   Global Styles
-=============================== */
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -33,9 +31,7 @@ body {
     line-height: 1.6;
 }
 
-/* ============================
-   Header
-=============================== */
+/* Header */
 .site-header {
     display: flex;
     justify-content: space-between;
@@ -71,11 +67,8 @@ body {
     margin-bottom: 1rem;
 }
 
-/* ============================
-   Articles Section
-=============================== */
 .articles {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 2rem auto;
     padding: 0 2rem;
     display: flex;
@@ -83,59 +76,74 @@ body {
     gap: 3rem;
 }
 
-.card {
+
+.article {
     display: flex;
-    align-items: center;
+    width: 100%;
+    align-items: flex-start;
     gap: 2rem;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
 }
 
 /* Article 1: box left, text right */
-.article-left {
+#article-1 {
     flex-direction: row;
 }
 
-/* Article 2: text left, box right */
-.article-right {
-    flex-direction: row-reverse;
+/* Article 2: box right, text left */
+#article-2 {
+    flex-direction: row; 
 }
 
-/* White box */
-.box {
-    width: 200px;
-    height: 150px;
-    background-color: #fff;
+#article-2 .article-text {
+    order: 1; /* text first */
+}
+
+#article-2 .article-box {
+    order: 2; /* box second */
+}
+
+.article-box {
+    width: 390px;
+    height: 300px;
+    background-color: white;
+    border: 2px solid #ddd;
     border-radius: 8px;
-    border: 1px solid #e0e0e0;
     flex-shrink: 0;
 }
 
-/* Text styling */
 .article-text {
-    flex: 1;
+    flex: 1 1 auto;
     padding: 1rem;
+    min-width: 0;
 }
 
-/* Typewriter effect */
 .typewriter {
     font-family: monospace;
     font-size: 1rem;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 2px solid #222; /* Cursor */
+    display: inline-block; /* shrink to content */
+    white-space: normal;   /* allow wrapping */
+    position: relative;   
 }
 
-/* ============================
-   About Page
-=============================== */
+.cursor {
+    display: inline;        
+    animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* About Page */
 .about {
     max-width: 800px;
     margin: auto;
     padding: 4rem 2rem;
 }
 
-/* ============================
-   Footer
-=============================== */
+/* Footer */
 footer {
     text-align: center;
     padding: 1.5rem;
