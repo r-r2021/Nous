@@ -163,6 +163,41 @@ body {
     50% { opacity: 0; }
 }
 
+/* ============================
+   Responsive / Mobile Layout
+=============================== */
+@media (max-width: 768px) {
+    .article {
+        flex-direction: column;       /* stack box above text */
+        align-items: flex-start;
+        gap: 1rem;                    /* smaller gap */
+    }
+
+    .article-box {
+        width: 100%;                  /* full width on small screens */
+        height: 200px;                /* adjust proportionally */
+    }
+
+    .article-text {
+        width: 100%;
+    }
+
+    .read-more {
+        margin-top: 0.5rem;           /* smaller spacing under text */
+    }
+}
+
+/* Optional: extra small screens */
+@media (max-width: 480px) {
+    .typewriter {
+        font-size: 0.9rem;            /* slightly smaller text */
+    }
+
+    .article-box {
+        height: 150px;                /* shrink box for tiny screens */
+    }
+}
+
 /* About Page */
 .about {
     max-width: 800px;

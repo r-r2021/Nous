@@ -20,10 +20,10 @@ function startTypewriter() {
                 i++;
                 setTimeout(type, 50);
             } else {
-                // typing finished
+                
                 cursor.remove();
 
-                // ✅ CORRECT way to find the button
+                
                 const articleText = el.closest(".article-text");
                 if (!articleText) return;
 
@@ -40,5 +40,4 @@ function startTypewriter() {
     });
 }
 
-// Start AFTER loading animation
 setTimeout(startTypewriter, 3200);
