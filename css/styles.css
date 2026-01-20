@@ -1,3 +1,22 @@
+/* Variables */
+
+:root {
+
+    --box-size: 150px;
+    --text-weight: 300;
+    --text-size: 80px;
+
+    /* Colors */
+
+    --black: #000;
+    --background-light: #c9c4b8;
+
+    --header-light: #ccc1a7;
+
+    --loading-bar-light: rgba(0,0,0,0.1);
+
+}
+
 /* ============================
    Global Styles
 =============================== */
@@ -5,12 +24,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: "georgia", Arial, sans-serif;
 }
 
 body {
-    background: #fafafa;
-    color: #222;
+    background: var(--background-light);
+    color: var(--black);
     line-height: 1.6;
 }
 
@@ -23,7 +42,7 @@ body {
     align-items: center;
     padding: 1.5rem 2rem;
     border-bottom: 1px solid #ddd;
-    background: white;
+    background: var(--header-light);
 }
 
 .logo {
@@ -34,7 +53,7 @@ body {
 .nav a {
     margin-left: 1.5rem;
     text-decoration: none;
-    color: #222;
+    color: var(--black);
     font-weight: 500;
 }
 
