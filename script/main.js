@@ -3,9 +3,8 @@ function startTypewriter() {
 
     typewriters.forEach(el => {
         const text = el.dataset.text;
-        el.textContent = ""; 
+        el.textContent = "";
 
-   
         const cursor = document.createElement("span");
         cursor.classList.add("cursor");
         cursor.textContent = "|";
@@ -17,11 +16,23 @@ function startTypewriter() {
             if (i < text.length) {
                 const span = document.createElement("span");
                 span.textContent = text[i];
-                el.insertBefore(span, cursor); // insert before cursor
+                el.insertBefore(span, cursor);
                 i++;
                 setTimeout(type, 50);
             } else {
-                cursor.remove(); 
+                // typing finished
+                cursor.remove();
+
+                // ✅ CORRECT way to find the button
+                const articleText = el.closest(".article-text");
+                if (!articleText) return;
+
+                const button = articleText.querySelector(".read-more");
+                if (button) {
+                    requestAnimationFrame(() => {
+                        button.classList.add("visible");
+                    });
+                }
             }
         }
 
@@ -29,6 +40,5 @@ function startTypewriter() {
     });
 }
 
-setTimeout(() => {
-    startTypewriter();
-}, 3200);
+// Start AFTER loading animation
+setTimeout(startTypewriter, 3200);
