@@ -57,14 +57,23 @@ body {
    Main / Intro Section
 =============================== */
 .hero, .intro {
-    padding: 4rem 2rem;
+    padding: 6rem 2rem;        /* a little more vertical spacing */
     max-width: 900px;
     margin: auto;
+    text-align: center;        /* center heading + paragraph */
 }
 
 .hero h2, .intro h2 {
-    font-size: 2.2rem;
+    font-size: 3rem;           /* bigger and more prominent */
+    font-weight: 700;
     margin-bottom: 1rem;
+    line-height: 1.2;          /* tighter for impact */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #333;               /* slightly darker than background */
+    margin-bottom: 2rem;       /* space before articles section */
 }
 
 .articles {
@@ -105,8 +114,10 @@ body {
 }
 
 .article-box {
-    width: 390px;
-    height: 300px;
+    width: 100%;          /* takes full width on mobile */
+    max-width: 390px;     /* desktop max */
+    height: auto;         /* scales with width */
+    aspect-ratio: 4/3;    /* keeps proportion */
     background-color: white;
     border: 2px solid #ddd;
     border-radius: 8px;
@@ -168,22 +179,18 @@ body {
 =============================== */
 @media (max-width: 768px) {
     .article {
-        flex-direction: column;       /* stack box above text */
-        align-items: flex-start;
-        gap: 1rem;                    /* smaller gap */
-    }
-
-    .article-box {
-        width: 100%;                  /* full width on small screens */
-        height: 200px;                /* adjust proportionally */
+        flex-direction: column;
+        align-items: center; /* center box + text */
+        gap: 1rem;
     }
 
     .article-text {
         width: 100%;
+        text-align: center; /* looks better when stacked */
     }
 
     .read-more {
-        margin-top: 0.5rem;           /* smaller spacing under text */
+        margin-top: 0.5rem;
     }
 }
 
