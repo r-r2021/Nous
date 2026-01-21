@@ -44,16 +44,15 @@
     .about-hero h2 { font-size: 2.2rem; }
 }
 
-/* Loader styling */
 .n-loader {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: "georgia", serif;
-    font-size: 6rem; /* big N in the center */
+    font-size: 6rem; 
     font-weight: 700;
-    color: #c9c4b8; /* matches background initially */
+    color: #c9c4b8; 
     z-index: 1000;
 }
 
@@ -61,13 +60,13 @@
     display: inline-block;
     background: linear-gradient(90deg, #c9c4b8 0%, #000 100%);
     -webkit-background-clip: text; /* Chrome, Safari, Edge */
-    -webkit-text-fill-color: transparent; /* Chrome, Safari, Edge */
-    background-clip: text; /* standard */
-    color: transparent; /* fallback */
+    -webkit-text-fill-color: transparent; /* Apparently works on: Chrome, Safari, Edge */
+    background-clip: text; 
+    color: transparent; 
     animation: fillN 1s forwards;
 }
 
-/* Animate the N “filling up” */
+/* Animates the N “filling up” - dhiroxy dont mess with this it took a lot of time */
 @keyframes fillN {
     0% { background-position: -100% 0; }
     100% { background-position: 0 0; }
