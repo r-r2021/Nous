@@ -29,6 +29,7 @@ body {
     background: var(--background-light);
     color: var(--black);
     line-height: 1.6;
+    padding-top: 75px;
 }
 
 /* Header */
@@ -37,8 +38,14 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 2rem;
-    border-bottom: 1px solid #ddd;
-    background: var(--header-light);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(201, 196, 184, 0.7);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
 }
 
 .logo {
