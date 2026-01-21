@@ -10,24 +10,19 @@ hamburger.addEventListener("click", () => {
 
 // Close menu when a link is clicked
 const mobileNavLinks = mobileNav.querySelectorAll("a");
+
 mobileNavLinks.forEach(link => {
     link.addEventListener("click", (e) => {
-        // Only prevent default for internal links to same page
-        if (link.getAttribute("href") === "index.html" || link.getAttribute("href") === "#") {
+        const href = link.getAttribute("href");
+
+        // Only block placeholder links
+        if (href === "#") {
             e.preventDefault();
         }
-        
+
+        // Close menu
         hamburger.classList.remove("active");
         mobileNav.classList.remove("open");
-        
-        // If it's an external navigation, let it happen
-        if (link.getAttribute("href") !== "index.html" && link.getAttribute("href") !== "#") {
-            setTimeout(() => {
-                window.location.href = link.getAttribute("href");
-            }, 300);
-        }
+        // Let browser handle navigation naturally
     });
 });
-
-
-

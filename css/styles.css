@@ -60,27 +60,25 @@ body {
     font-weight: 500;
 }
 
-/* ============================
-   Main / Intro Section
-=============================== */
+/* Main / Intro Section */
 .hero, .intro {
-    padding: 6rem 2rem;        /* a little more vertical spacing */
+    padding: 6rem 2rem;        
     max-width: 900px;
     margin: auto;
-    text-align: center;        /* center heading + paragraph */
+    text-align: center;        
 }
 
 .hero h2, .intro h2 {
-    font-size: 3rem;           /* bigger and more prominent */
+    font-size: 3rem;           
     font-weight: 700;
     margin-bottom: 1rem;
-    line-height: 1.2;          /* tighter for impact */
+    line-height: 1.2;          
 }
 
 .hero p {
     font-size: 1.2rem;
-    color: #333;               /* slightly darker than background */
-    margin-bottom: 2rem;       /* space before articles section */
+    color: #333;               
+    margin-bottom: 2rem;       
 }
 
 .articles {
@@ -117,14 +115,14 @@ body {
 }
 
 #article-2 .article-box {
-    order: 2; /* box second */
+    order: 2; 
 }
 
 .article-box {
-    width: 100%;          /* takes full width on mobile */
-    max-width: 390px;     /* desktop max */
-    height: auto;         /* scales with width */
-    aspect-ratio: 4/3;    /* keeps proportion */
+    width: 100%;          
+    max-width: 390px;     
+    height: auto;         
+    aspect-ratio: 4/3;    
     background-color: white;
     border: 2px solid #ddd;
     border-radius: 8px;
@@ -181,19 +179,17 @@ body {
     50% { opacity: 0; }
 }
 
-/* ============================
-   Responsive / Mobile Layout
-=============================== */
+/* Responsive / Mobile Layout */
 @media (max-width: 768px) {
     .article {
         flex-direction: column;
-        align-items: center; /* center box + text */
+        align-items: center; 
         gap: 1rem;
     }
 
     .article-text {
         width: 100%;
-        text-align: center; /* looks better when stacked */
+        text-align: center; 
     }
 
     .read-more {
@@ -201,14 +197,14 @@ body {
     }
 }
 
-/* Optional: extra small screens */
+
 @media (max-width: 480px) {
     .typewriter {
-        font-size: 0.9rem;            /* slightly smaller text */
+        font-size: 0.9rem;            
     }
 
     .article-box {
-        height: 150px;                /* shrink box for tiny screens */
+        height: 150px;                
     }
 }
 
