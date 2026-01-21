@@ -1,81 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nous</title>
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
 
-        <title>Nous</title>
+<body>
 
-        <link rel="stylesheet" href="css/styles.css">
-        <link rel="stylesheet" href="css/loading.css">
-        <link rel="stylesheet" href="css/menu.css">
+    <div class="site" id="site">
 
-    </head>
+        <!-- Header / Navigation -->
+        <header class="site-header">
+            <h1 class="logo">Nous</h1>
 
-    <body>
-        
-        <!-- Loading Page -->
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+            </nav>
 
-        <div class="loading-screen" id="loadingScreen">
+            <!-- Hamburger Menu -->
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-            <div class="container">
-                
-                <div class="box"></div>
+            <!-- Mobile Menu -->
+            <nav class="mobile-nav" id="mobileNav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+            </nav>
+        </header>
 
-                <div class="wrapper">
+        <!-- N Loader -->
+        <div class="n-loader" id="nLoader">
+            <span>N</span>
+        </div>
 
-                    <div class="N">N</div>
-                    <div class="text">
-                        <span class="ghost">N</span><span>O</span><span>U</span><span>S</span>
-                    </div>
+        <!-- About Page Content -->
+        <main class="about-page" id="aboutContent">
+            <!-- Hero -->
+            <section class="about-hero">
+                <h2>About Nous</h2>
+                <p class="about-subtitle">
+                    Thought, culture, and ideas — explored with intent.
+                </p>
+            </section>
 
+            <!-- Info blocks -->
+            <section class="about-content">
+                <div class="about-block">
+                    <h3>What is Nous?</h3>
+                    <p>
+                        Nous is a space for ideas, perspectives, and stories that challenge
+                        the way we think and see the world.
+                    </p>
                 </div>
-                
-            </div>
+                <div class="about-block">
+                    <h3>Why it exists</h3>
+                    <p>
+                        In a world built for speed, Nous slows things down.
+                        It values depth over noise and clarity over excess.
+                    </p>
+                </div>
+            </section>
+        </main>
 
-            <div class="loading-bar"></div>
+    </div>
 
-        </div>
-
-
-
-
-
-
-
-
-
-        <!-- Main Website -->
-
-        <div class="site" id="site">
-
-           <header class="site-header">
-
-                <h1 class="logo">Nous</h1>
-
-                <nav class="nav">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                </nav>
-
-                <!-- Hamburger Menu -->
-                <button class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-
-                <!-- Mobile Menu -->
-                <nav class="mobile-nav" id="mobileNav">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                </nav>
-
-            </header>
-        </div>
-        <script src="script/loading.js"></script>
-        <script src="script/menu.js"></script>
-    </body>
+    <!-- JS -->
+    <script src="script/menu.js"></script>
+    <script src="script/about.js"></script>
+</body>
 </html>

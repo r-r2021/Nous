@@ -8,7 +8,7 @@ hamburger.addEventListener("click", () => {
     mobileNav.classList.toggle("open");
 });
 
-// Close menu when a link is clicked
+
 const mobileNavLinks = mobileNav.querySelectorAll("a");
 
 mobileNavLinks.forEach(link => {
@@ -23,6 +23,5 @@ mobileNavLinks.forEach(link => {
         // Close menu
         hamburger.classList.remove("active");
         mobileNav.classList.remove("open");
-        // Let browser handle navigation naturally
     });
 });
