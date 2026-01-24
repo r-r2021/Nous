@@ -10,10 +10,14 @@
 
     --black: #000;
     --background-light: #c9c4b8;
-
-    --header-light: #ccc1a7;
-
     --loading-bar-light: rgba(0,0,0,0.1);
+
+    /* Other Ones */
+
+    --letter-space: 8px;
+
+    --initial-weight: 300;
+    --initial-size: 110px;
 
 }
 
