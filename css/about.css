@@ -7,6 +7,7 @@
 .about-hero {
     margin-bottom: 4rem;
     text-align: center;
+    padding-top: 6rem;
 }
 
 .about-hero h2 {
@@ -44,38 +45,123 @@
     .about-hero h2 { font-size: 2.2rem; }
 }
 
+/* ==============================
+   N Loader
+============================== */
 .n-loader {
-    position: fixed;
+    position: fixed;          /* sit on top of everything */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: "georgia", serif;
-    font-size: 6rem; 
+    font-size: 6rem;
     font-weight: 700;
-    color: #c9c4b8; 
-    z-index: 1000;
+    color: #c9c4b8;
+    z-index: 2000;            /* higher than header & mobile nav */
+    background: var(--background-light); /* covers underlying content */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .n-loader span {
     display: inline-block;
     background: linear-gradient(90deg, #c9c4b8 0%, #000 100%);
-    -webkit-background-clip: text; /* Chrome, Safari, Edge */
-    -webkit-text-fill-color: transparent; /* Apparently works on: Chrome, Safari, Edge */
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
     background-clip: text; 
     color: transparent; 
     animation: fillN 1s forwards;
 }
 
-/* Animates the N “filling up” - dhiroxy dont mess with this it took a lot of time */
+/* Animate the N “filling up” */
 @keyframes fillN {
     0% { background-position: -100% 0; }
     100% { background-position: 0 0; }
 }
 
+/* Hide content initially */
 #aboutContent {
     opacity: 0;
+    pointer-events: none;       
     transition: opacity 0.5s ease;
 }
+
 #aboutContent.visible {
     opacity: 1;
+    pointer-events: auto;
+}
+
+.n-loader.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+.about-flashcards {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flashcard-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 800px;
+  width: 100%;
+}
+
+.flashcards-wrapper {
+  overflow: hidden;
+  flex: 1;
+  position: relative;
+  height: 450px; /* taller for more presence */
+}
+
+.flashcard {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateX(100%) rotateY(0deg); /* start offscreen right */
+  transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.5s ease;
+}
+
+.flashcard.active {
+  opacity: 1;
+  transform: translateX(0) rotateY(0deg); /* resting position */
+  z-index: 1;
+}
+
+.flashcard.exit-left {
+  transform: translateX(-120%) rotateY(20deg); /* goes left offscreen */
+  opacity: 0;
+}
+
+.flashcard.exit-right {
+  transform: translateX(120%) rotateY(-20deg); /* goes right offscreen */
+  opacity: 0;
+}
+
+.flashcard-btn {
+  background: var(--header-light);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.flashcard-btn:hover {
+  background: var(--black);
+  color: white;
 }
