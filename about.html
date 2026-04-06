@@ -13,7 +13,13 @@
 
 <body>
 
-    <div class="site" id="site">
+    <!-- N Loader -->
+    <div class="n-loader" id="nLoader">
+        <span>N</span>
+    </div>
+
+    <!-- Main Site -->
+    <div class="site" id="aboutContent">
 
         <!-- Header / Navigation -->
         <header class="site-header">
@@ -38,42 +44,44 @@
             </nav>
         </header>
 
-        <!-- N Loader -->
-        <div class="n-loader" id="nLoader">
-            <span>N</span>
-        </div>
+        <!-- About Hero Section -->
+        <section class="about-hero">
+            <h2>About Nous</h2>
+            <p class="about-subtitle">
+                Explore, Engage, Evolve.
+            </p>
+        </section>
 
-        <!-- About Page Content -->
-        <main class="about-page" id="aboutContent">
-            <!-- Hero -->
-            <section class="about-hero">
-                <h2>About Nous</h2>
-                <p class="about-subtitle">
-                    Explore, Engage, Evolve.
-                </p>
-            </section>
+        <!-- Flashcards Section -->
+        <section class="about-flashcards">
+            <div class="flashcard-container">
+                <button class="flashcard-btn left">&larr;</button>
 
-            <!-- Info blocks -->
-            <section class="about-content">
-                <div class="about-block">
-                    <h3>What is Nous?</h3>
-                    <p>
-                        Nous is...
-                    </p>
+                <div class="flashcards-wrapper">
+                    <div class="flashcard active">
+                        <h3>What is Nous?</h3>
+                        <p>Nous is a space for ideas...</p>
+                    </div>
+                    <div class="flashcard">
+                        <h3>Why it exists</h3>
+                        <p>In a world built for speed...</p>
+                    </div>
+                    <div class="flashcard">
+                        <h3>How it works</h3>
+                        <p>By encouraging thought and reflection...</p>
+                    </div>
                 </div>
-                <div class="about-block">
-                    <h3>Why does it exist?</h3>
-                    <p>
-                        ...
-                    </p>
-                </div>
-            </section>
-        </main>
+
+                <button class="flashcard-btn right">&rarr;</button>
+            </div>
+        </section>
 
     </div>
 
     <!-- JS -->
     <script src="script/menu.js"></script>
     <script src="script/about.js"></script>
+    <script src="script/aboutFlashcards.js"></script>
+
 </body>
 </html>
